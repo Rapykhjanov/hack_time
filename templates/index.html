@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Instagram</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        </head>
+    <body>
+        <div class="login-container">
+            <div class="login-box">
+                <h1>Instagram</h1>
+                <form action="/login" method="post">
+                    <input type="text" name="username" placeholder="Телефон, имя пользователя или эл. адрес" required>
+                    <input type="password" name="password" placeholder="Пароль" required>
+                    <button type="submit">Войти</button>
+                </form>
+                <div class="divider">ИЛИ</div>
+                <a href="#" class="facebook-login">Войти через Facebook</a>
+                <a href="#" class="forgot-password">Забыли пароль?</a>
+            </div>
+            <div class="signup-box">
+                У вас ещё нет аккаунта? <a href="#">Зарегистрироваться</a>
+            </div>
+        </div>
+    </body>
+    </html>
